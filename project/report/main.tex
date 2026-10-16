@@ -1,0 +1,71 @@
+\documentclass[UTF8,12pt,a4paper]{ctexart}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\usepackage{siunitx}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\title{课程项目题目：用一句话说明问题与方法}
+\author{姓名 \quad 学号}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+用 150--250 字说明问题、数据、方法、公平比较方式、最重要的定量结果和主要限制。不要在摘要中堆砌背景。
+\end{abstract}
+
+\section{问题定义}
+说明现实问题、输入、输出、预期用户、使用场景和不使用场景。给出主指标及其与错误代价的关系。
+
+\section{数据与探索性分析}
+记录数据来源、许可、样本量、类别分布、缺失/损坏/重复情况、划分策略和潜在偏差。明确哪些处理只在训练集上拟合。
+
+\section{方法}
+\subsection{基线}
+选择可解释、足够简单的基线，说明它为主模型提供怎样的参照。
+
+\subsection{主模型与训练}
+写清输入尺寸、网络结构、损失函数、优化器、学习率、批量大小、训练轮数、随机种子和模型选择规则。
+
+\subsection{改进与对照}
+至少两项改进。每项先写假设，再写唯一主要改动和保持不变的条件。
+
+\section{结果}
+用统一数据划分和评价指标比较所有方法。表~\ref{tab:results} 是最小结果表结构。
+
+\begin{table}[ht]
+  \centering
+  \caption{模型比较；最终版本应报告验证结果，测试集只评价冻结方案。}
+  \label{tab:results}
+  \begin{tabular}{lccc}
+    \toprule
+    方法 & 验证集主指标 & 测试集主指标 & 参数量 \\
+    \midrule
+    简单基线 & -- & -- & -- \\
+    主模型 & -- & -- & -- \\
+    改进一 & -- & -- & -- \\
+    改进二 & -- & -- & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{误差分析}
+报告混淆矩阵、逐类结果和训练曲线；把错误样本按可解释类型分组。区分数据问题、模型问题和评价问题。
+
+\section{局限、伦理与社会影响}
+讨论数据代表性、隐私、偏差、错误成本、潜在误用和模型不应部署的条件。避免把数据集上的结果外推为普遍能力。
+
+\section{结论}
+直接回答研究问题，给出受证据支持的结论与最值得验证的下一步。
+
+\section*{复现说明}
+列出代码版本、环境、数据获取步骤、运行命令、随机种子和结果产物路径。说明任何无法公开的材料及替代验证方式。
+
+\begin{thebibliography}{9}
+\bibitem{course}
+课程讲义与教师提供资料，2026--2027 秋冬学期。
+\end{thebibliography}
+
+\end{document}
+
